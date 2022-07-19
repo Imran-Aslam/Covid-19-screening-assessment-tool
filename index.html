@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap CDN  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- font awesome icon  -->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <!-- Jquery CDN  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="index.css" />
+    <title>Screening App</title>
+</head>
+
+<body>
+    <div class="container p-0">
+        <!-- Screen 1  -->
+        <div class="index-header p-4">
+            <div>
+                <img src="./images/logo.png" class="img-fluid w-25" height="50px" />
+                <!-- <h3 class="pt-3">COVID-19 Screening Tool </h3> -->
+            </div>
+            <div class="row">
+                <div class="col-8">
+                    <h3 class="pt-3 fw-bold">COVID-19 Screening Tool</h3>
+                    <p class="text-muted">
+                        use this assessment tool to help determine whether you need to be tested for COVID-19.
+                    </p>
+                    <p class="text-muted">
+                        You can complete this asscessment for yourself or on behalf someone else is they are not able.
+                    </p>
+                </div>
+                <div class="col-4 pt-5 text-center">
+                    <img src="./images/covid19screen.png" class="img-fluid w-50 h-100" alt="covid19screen-image" />
+                </div>
+            </div>
+            <button class="btn btn-primary fw-bold w-100 mt-2" data-bs-toggle="modal" data-bs-target="#screeningModal">
+          Start Screening
+        </button>
+        </div>
+        <div class="index-section p-4">
+            <h2 class="pb-3 fw-bold">More Information</h2>
+            <div class="list-group p-0 m-0">
+                <!-- Covid  -->
+                <div class="row border-bottom" data-bs-toggle="modal" data-bs-target="#covidModal">
+                    <div class="col-4 text-center">
+                        <img src="./images/virus.png" class="img-fluid w-75 pt-3" alt="virus image" />
+                    </div>
+                    <div class="col-8 d-flex justify-content-between">
+                        <div>
+                            <h5>What is COVID-19?</h5>
+                            <p class="text-muted fw-light lh-0">
+                                Crononavirus disease (COVID-19) is an infectious disease...
+                            </p>
+                        </div>
+                        <div class="arrow">
+                            <img src="./images/icon-arrow.png" class="img-fluid w-100" height="300px" alt="icon" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Screen 2 what is COVID 19  -->
+                <div class="modal fade" id="covidModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header index2-header">
+                                <div class="logo">
+                                    <img src="./images/logo.png" class="img-fluid" width="50px" height="50px" alt="virus-image" />
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="index2-section p-2">
+                                    <div class="heading pt-4 pb-2">
+                                        <h2 class="fw-bold">COVID-19</h2>
+                                        <p class="text-muted pt-2">
+                                            Coronavirus disease (COVID-19) is an infectious caused by a new virus.
+                                        </p>
+                                        <p class="text-muted text-justify">
+                                            The disease causes respiratory illness(like the flu) with symptoms such as a cough, fever, and in more severe cases, difficulty breathing. You can protect yourself by washing your hands frequently, avoiding touching your face, and avoiding close contact(1
+                                            meter or 3 feet) with people who are unwell.
+                                        </p>
+                                        <h5 class="pt-3">How it spreads</h5>
+                                        <p class="text-muted pt-2">
+                                            Coronavirus disease spreads primarily through contact with an infected person when thay cough or sneeze. It also spreads when a person touches a surface or object that has the virus on it, then touches their eyes, nose, or mouth.
+                                        </p>
+                                    </div>
+                                    <div class="index3-footer">
+                                        <a target="_blank" rel="noopener" href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" aria-label="Learn more on who.int: Overview">
+                        Learn more on who.int →
+                      </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Symptoms  -->
+                <div class="row border-bottom pt-3" data-bs-toggle="modal" data-bs-target="#symptomModal">
+                    <div class="col-4 text-center">
+                        <img src="./images/symptoms.png" class="img-fluid w-75 pt-3" alt="virus image" />
+                    </div>
+                    <div class="col-8 d-flex justify-content-between">
+                        <div>
+                            <h5>What are its Symptoms</h5>
+                            <p class="text-muted fw-light lh-0">
+                                The COVID-19 affects different people in different ways...
+                            </p>
+                        </div>
+                        <div class="arrow1">
+                            <img src="./images/icon-arrow.png" class="img-fluid w-100" height="300px" alt="icon" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Screen 3 Symptoms  -->
+                <div class="modal fade" id="symptomModal" tabindex="-1" aria-labelledby="symptomModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header index2-header">
+                                <div class="logo">
+                                    <img src="./images/logo.png" class="img-fluid" width="50px" height="50px" alt="virus-image" />
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="index2-section p-2">
+                                    <div class="heading pt-3 pb-2">
+                                        <h3 class="fw-bold py-2">Symptoms</h3>
+                                        <p class="text-muted">
+                                            The COVID-19 virus affects different people in different ways. COVID-19 is a respiratory disease and most infected people will develop mild to moderate symptoms and recover without requiring special treatment. People who have underlying medical conditions
+                                            and those over 60 years old have a higher risk of developing severe disease and death.
+                                        </p>
+
+                                        <h5 class="py-2">Common symptoms include:</h5>
+
+                                        <ul class="p-0 m-0 list-unstyled item-list text-muted">
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3 my-auto">
+                                                        <img src="./images/1.png" class="img-fluid w-75" />
+                                                    </div>
+                                                    <div class="col-9 my-auto">
+                                                        Fever and body aches
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3 my-auto">
+                                                        <img src="./images/2.png" class="img-fluid w-75" />
+                                                    </div>
+                                                    <div class="col-9 my-auto">Dry Cough</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3 my-auto">
+                                                        <img src="./images/tirdeness.png" class="img-fluid w-75" />
+                                                    </div>
+                                                    <div class="col-9 my-auto">Tiredness</div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <h5 class="pt-4 pb-2">Other symptoms include:</h5>
+                                        <ul class="p-0 m-0 list-unstyled item-list text-muted">
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3 my-auto">
+                                                        <img src="./images/8.png" class="img-fluid w-75" />
+                                                    </div>
+                                                    <div class="col-9 my-auto">Pains and aches</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3 my-auto">
+                                                        <img src="./images/thorat.png" class="img-fluid w-75" />
+                                                    </div>
+                                                    <div class="col-9 my-auto">Sore throat</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3 my-auto">
+                                                        <img src="./images/4.png" class="img-fluid w-75" />
+                                                    </div>
+                                                    <div class="col-9 my-auto">Shortness of breath</div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3 my-auto">
+                                                        <img src="./images/intestine.png" class="img-fluid w-75" />
+                                                    </div>
+                                                    <div class="col-9 my-auto">
+                                                        Very few people will report diarrhoea, nausea or a runny nose.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="index3-footer">
+                                        <p class="pt-4 pb-2 text-muted">
+                                            People with mild symptoms who are otherwise healthy should self-isolate and contact their medical provider or a COVID-19 information line for advice on testing and referral. People with fever, cough or difficulty breathing should call their doctor and
+                                            seek medical attention.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Prevention  -->
+                <div class="row pt-3" data-bs-toggle="modal" data-bs-target="#preventionModal">
+                    <div class="col-4 text-center">
+                        <img src="./images/prevent.png" class="img-fluid w-75 pt-3" alt="virus image" />
+                    </div>
+                    <div class="col-8 d-flex justify-content-between">
+                        <div>
+                            <h5>How can you prevent it?</h5>
+                            <p class="text-muted fw-light lh-0">
+                                There's currently no vaccine to prevent coronavirus disease...
+                            </p>
+                        </div>
+                        <div class="arrow1">
+                            <img src="./images/icon-arrow.png" class="img-fluid w-100" height="300px" alt="icon" />
+                        </div>
+                    </div>
+                </div>
+                <!-- Screen 4 Preventions  -->
+                <div class="modal fade" id="preventionModal" tabindex="-1" aria-labelledby="preventionModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header index2-header">
+                                <div class="logo">
+                                    <img src="./images/logo.png" class="img-fluid" width="50px" height="50px" alt="virus-image" />
+                                </div>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="index2-section p-2">
+                                    <div class="heading pt-3 pb-2">
+                                        <h3 class="fw-bold py-2">Prevention</h3>
+                                        <p class="text-muted">
+                                            There's currently no vaccine to prevent coronavirus disease (COVID-19). You can protect yourself and help prevent spreading the virus to others if you do the following:
+                                        </p>
+
+                                        <ul class="p-0 m-0 list-unstyled item-list text-muted">
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3 my-auto">
+                                                        <img src="./images/hands.png" class="img-fluid" />
+                                                    </div>
+                                                    <div class="col-9 my-auto">
+                                                        Wash your hands regularly with soap and water, or clean them with alcohol-based hand rub.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3 my-auto">
+                                                        <img src="./images/distance.png" class="img-fluid" />
+                                                    </div>
+                                                    <div class="col-9 my-auto">
+                                                        Maintain at least 1 metre distance between you and people coughing or sneezing.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3 my-auto">
+                                                        <img src="./images/away.png" class="img-fluid" />
+                                                    </div>
+                                                    <div class="col-9 my-auto">
+                                                        To help prevent infections, keep your hands away from your eyes, nose, and mouth.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3 my-auto">
+                                                        <img src="./images/cover.png" class="img-fluid" />
+                                                    </div>
+                                                    <div class="col-9 my-auto">
+                                                        Cover your mouth and nose when coughing or sneezing.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3 my-auto">
+                                                        <img src="./images/home.png" class="img-fluid" />
+                                                    </div>
+                                                    <div class="col-9 my-auto">
+                                                        Stay home if you feel unwell. Staying home right now isn't just about keeping you and your family safe—it's about helping to save the lives of others.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="row">
+                                                    <div class="col-3 my-auto">
+                                                        <img src="./images/lungs.png" class="img-fluid" />
+                                                    </div>
+                                                    <div class="col-9 my-auto">
+                                                        Refrain from smoking and other activities that weaken the lungs.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="pb-3">
+                                                <div class="row">
+                                                    <div class="col-3 my-auto">
+                                                        <img src="./images/physica.png" class="img-fluid" />
+                                                    </div>
+                                                    <div class="col-9 my-auto">
+                                                        Practice physical distancing by avoiding unnecessary travel and staying away from large groups of people.
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Now Screeing Text Screen Start Here  -->
+        <div class="modal fade" id="screeningModal" tabindex="-1" aria-labelledby="screeningModalLabel" aria-hidden="true">
+            <div class="modal-dialog w-100">
+                <div class="modal-content">
+                    <div class="modal-header index2-header">
+                        <div class="logo">
+                            <img src="./images/logo.png" class="img-fluid" width="50px" height="50px" alt="virus-image" />
+                        </div>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body question">
+                        <div class="container">
+                            <!-- Question 1  -->
+                            <div class="row q1 active">
+                                <div class="index2-section p-2 text-center">
+                                    <div class="heading pt-5 pb-5">
+                                        <h2 class="fw-bold">Do you have fever above 101.4?</h2>
+                                    </div>
+                                    <div class="fever-image py-5">
+                                        <img src="./images/fever.png" class="img-fluid w-75" alt="fever-image" />
+                                    </div>
+                                </div>
+                                <div class="index2-footer p-2 pt-4">
+                                    <div class="buttons pt-5">
+                                        <button class="btn btn-primary w-100 mt-3" onclick="recordAnswers(1,1,2)">
+                        Yes, I do
+                      </button>
+                                        <button class="btn btn-primary w-100 mt-4" onclick="recordAnswers(1,2,2)">
+                        No, I don't
+                      </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 2  -->
+                            <div class="row q2">
+                                <div class="index2-section p-2 text-center">
+                                    <div class="heading pt-5 pb-5">
+                                        <h2 class="fw-bold">Do you have Cough - (Dry Cough)?</h2>
+                                    </div>
+                                    <div class="fever-image py-5">
+                                        <img src="./images/2.png" class="img-fluid w-75" alt="fever-image" />
+                                    </div>
+                                </div>
+                                <div class="index2-footer p-2 pt-4">
+                                    <div class="buttons pt-5">
+                                        <button class="btn btn-primary w-100 mt-3" onclick="recordAnswers(2,1,3)">
+                        Yes, I do
+                      </button>
+                                        <button class="btn btn-primary w-100 mt-4" onclick="recordAnswers(2,2,3)">
+                        No, I don't
+                      </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 3  -->
+                            <div class="row q3">
+                                <div class="index2-section p-2 text-center">
+                                    <div class="heading pt-5 pb-5">
+                                        <h2 class="fw-bold">Do you have Cough - (Wet Cough)?</h2>
+                                    </div>
+                                    <div class="fever-image py-5">
+                                        <img src="./images/3.png" class="img-fluid w-75" alt="fever-image" />
+                                    </div>
+                                </div>
+                                <div class="index2-footer p-2 pt-4">
+                                    <div class="buttons pt-5">
+                                        <button class="btn btn-primary w-100 mt-3" onclick="recordAnswers(3,1,4)">
+                        Yes, I do
+                      </button>
+                                        <button class="btn btn-primary w-100 mt-4" onclick="recordAnswers(3,2,4)">
+                        No, I don't
+                      </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 4  -->
+                            <div class="row q4">
+                                <div class="index2-section p-2 text-center">
+                                    <div class="heading pt-5 pb-5">
+                                        <h2 class="fw-bold">Do you have Shortness of Breath?</h2>
+                                    </div>
+                                    <div class="fever-image py-5">
+                                        <img src="./images/4.png" class="img-fluid w-75" alt="fever-image" />
+                                    </div>
+                                </div>
+                                <div class="index2-footer p-2 pt-4">
+                                    <div class="buttons pt-5">
+                                        <button class="btn btn-primary w-100 mt-3" onclick="recordAnswers(4,1,5)">
+                        Yes, I do
+                      </button>
+                                        <button class="btn btn-primary w-100 mt-4" onclick="recordAnswers(4,2,5)">
+                        No, I don't
+                      </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 5  -->
+                            <div class="row q5">
+                                <div class="index2-section p-2 text-center">
+                                    <div class="heading pt-5 pb-5">
+                                        <h2 class="fw-bold">Do you have Flu?</h2>
+                                    </div>
+                                    <div class="fever-image py-5">
+                                        <img src="./images/5.png" class="img-fluid w-75" alt="fever-image" />
+                                    </div>
+                                </div>
+                                <div class="index2-footer p-2 pt-4">
+                                    <div class="buttons pt-5">
+                                        <button class="btn btn-primary w-100 mt-3" onclick="recordAnswers(5,1,6)">
+                        Yes, I do
+                      </button>
+                                        <button class="btn btn-primary w-100 mt-4" onclick="recordAnswers(5,2,6)">
+                        No, I don't
+                      </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 6  -->
+                            <div class="row q6">
+                                <div class="index2-section p-2 text-center">
+                                    <div class="heading pt-5 pb-5">
+                                        <h2 class="fw-bold">
+                                            Have you travelled abroad in the last 15 days?
+                                        </h2>
+                                    </div>
+                                    <div class="fever-image py-5">
+                                        <img src="./images/6.png" class="img-fluid w-75" alt="fever-image" />
+                                    </div>
+                                </div>
+                                <div class="index2-footer p-2 pt-4">
+                                    <div class="buttons pt-5">
+                                        <button class="btn btn-primary w-100 mt-3" onclick="recordAnswers(6,1,7)">
+                        Yes, I do
+                      </button>
+                                        <button class="btn btn-primary w-100 mt-4" onclick="recordAnswers(6,2,7)">
+                        No, I don't
+                      </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 7  -->
+                            <div class="row q7">
+                                <div class="index2-section p-2 text-center">
+                                    <div class="heading pt-5 pb-5">
+                                        <h2 class="fw-bold">
+                                            Have you been in contact with any person who has recently travelled internationally?
+                                        </h2>
+                                    </div>
+                                    <div class="fever-image py-3">
+                                        <img src="./images/7.png" class="img-fluid w-75" alt="fever-image" />
+                                    </div>
+                                </div>
+                                <div class="index2-footer p-2 pt-4">
+                                    <div class="buttons pt-5">
+                                        <button class="btn btn-primary w-100 mt-3" onclick="recordAnswers(7,1,8)">
+                        Yes, I do
+                      </button>
+                                        <button class="btn btn-primary w-100 mt-4" onclick="recordAnswers(7,2,8)">
+                        No, I don't
+                      </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 8  -->
+                            <div class="row q8">
+                                <div class="index2-section p-2 text-center">
+                                    <div class="heading pt-5 pb-5">
+                                        <h2 class="fw-bold">Do you have chest infection?</h2>
+                                    </div>
+                                    <div class="fever-image py-5">
+                                        <img src="./images/8.png" class="img-fluid w-75" alt="fever-image" />
+                                    </div>
+                                </div>
+                                <div class="index2-footer p-2 pt-4">
+                                    <div class="buttons pt-5">
+                                        <button class="btn btn-primary w-100 mt-3" onclick="recordAnswers(8,1,9)">
+                        Yes, I do
+                      </button>
+                                        <button class="btn btn-primary w-100 mt-4" onclick="recordAnswers(8,2,9)">
+                        No, I don't
+                      </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 9  -->
+                            <div class="row q9">
+                                <div class="index2-section p-2 text-center">
+                                    <div class="heading pt-5 pb-5">
+                                        <h2 class="fw-bold">
+                                            Is your age more than or equal to 60 years of age?
+                                        </h2>
+                                    </div>
+                                    <div class="fever-image py-5">
+                                        <img src="./images/9.png" class="img-fluid w-75" alt="fever-image" />
+                                    </div>
+                                </div>
+                                <div class="index2-footer p-2 pt-4">
+                                    <div class="buttons pt-5">
+                                        <button class="btn btn-primary w-100 mt-3" onclick="recordAnswers(9,1,10)">
+                        Yes, I do
+                      </button>
+                                        <button class="btn btn-primary w-100 mt-4" onclick="recordAnswers(9,2,10)">
+                        No, I don't
+                      </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Question 10  -->
+                            <div class="row q10">
+                                <div class="index2-section p-2 text-center">
+                                    <div class="heading pt-5 pb-5">
+                                        <h2 class="fw-bold">
+                                            Due to Co-morbidities, do you take any medicine?
+                                        </h2>
+                                    </div>
+                                    <div class="fever-image py-5">
+                                        <img src="./images/10.png" class="img-fluid w-75" alt="fever-image" />
+                                    </div>
+                                </div>
+                                <div class="index2-footer p-2 pt-4">
+                                    <div class="buttons pt-5">
+                                        <button class="btn btn-primary w-100 mt-3" onclick="recordAnswers(10,1,0)">
+                        Yes, I do
+                      </button>
+                                        <button class="btn btn-primary w-100 mt-4" onclick="recordAnswers(10,2,0)">
+                        No, I don't
+                      </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- answer 1  -->
+                            <div class="row result1">
+                                <div class="index2-section p-2">
+                                    <div class="heading pt-3 pb-2">
+                                        <h3 class="fw-bold">High Probability of Corona!</h3>
+                                        <div class="list pt-3">
+                                            <ol class="list-group list-group-numbered">
+                                                <li class="list-group-item border-0 p-0">
+                                                    Isolate From Others
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    Rest and Take Care
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    Call Work Health Providers
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    Monitor Symptoms
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    Talk to Someone About Testing
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    Follow Govt Instructions
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <p class="text-muted pt-4">
+                                            As of now, your answers suggest that you may need testing. If anything changes, take the questionnaire again.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- answer 2  -->
+                            <div class="row result2">
+                                <div class="index2-section p-2">
+                                    <div class="heading pt-3 pb-2">
+                                        <h3 class="fw-bold">Suspected for Corona!</h3>
+                                        <div class="list pt-3">
+                                            <ol class="list-group list-group-numbered">
+                                                <li class="list-group-item border-0 p-0">
+                                                    Isolate From Others
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    Rest and Take Care
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    Call Work Health Providers
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    Monitor Symptoms
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    Talk to Someone About Testing
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    Follow Govt Instructions
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <p class="text-muted pt-4">
+                                            As of now, your answers suggest that you may need testing. If anything changes, take the questionnaire again.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- answer 3  -->
+                            <div class="row result3">
+                                <div class="index2-section p-2">
+                                    <div class="heading pt-3 pb-2">
+                                        <h3 class="fw-bold">You are all Good!</h3>
+                                        <div class="list pt-3">
+                                            <ol class="list-group list-group-numbered">
+                                                <li class="list-group-item border-0 p-0">
+                                                    No Test Needed At This Time
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    Maintain Social Distance
+                                                </li>
+                                                <li class="list-group-item border-0 p-0">
+                                                    Avoid groups of people and keep six feet apart from anyone who’s not part of the household. Especially avoid those showing symptoms.
+                                                </li>
+                                            </ol>
+                                        </div>
+                                        <p class="text-muted pt-4">
+                                            As of now, your answers suggest that you may need testing. If anything changes, take the questionnaire again.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var answerArray = [];
+
+        function recordAnswers(questionNo, answer, nextQuestionNo) {
+            answerArray[questionNo] = answer;
+            if (nextQuestionNo > 0) {
+                $(".question .row").removeClass("active");
+                $(".q" + nextQuestionNo).addClass("active");
+            } else {
+                q1 = answerArray[1];
+                q2 = answerArray[2];
+                q3 = answerArray[3];
+                q4 = answerArray[4];
+                q5 = answerArray[5];
+                q6 = answerArray[6];
+                q7 = answerArray[7];
+                q8 = answerArray[8];
+                q9 = answerArray[9];
+                q10 = answerArray[10];
+
+                if ((q1, q2, q4, q8, q9, q6 == 1) && (q3, q5, q7, q10 == 1 || 2)) {
+                    $(".question .row").removeClass("active");
+                    $(".result1").addClass("active");
+                } else if (
+                    (q2, q1, q4 == 1) &&
+                    (q3, q6, q5, q7, q10 == 1 || 2) &&
+                    (q8, q9 == 1 || 2)
+                ) {
+                    $(".question .row").removeClass("active");
+                    $(".result2").addClass("active");
+                } else {
+                    $(".question .row").removeClass("active");
+                    $(".result3").addClass("active");
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

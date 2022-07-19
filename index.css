@@ -1,0 +1,63 @@
+/* index header styling */
+
+.index-header {
+    background-color: lightgrey;
+}
+
+.arrow {
+    padding-top: 17%;
+    padding-left: 3%;
+}
+
+.arrow1 {
+    padding-top: 23%;
+    padding-left: 3%;
+}
+
+
+/* screen 2 css  */
+
+.index2-header {
+    background-color: lightgrey;
+    height: 50px;
+}
+
+.logo {
+    position: absolute;
+    top: 3%;
+}
+
+
+/* list CSS  */
+
+li {
+    padding-top: 2%;
+}
+
+
+/* Question CSS  */
+
+.question .row {
+    display: none;
+}
+
+.question .active {
+    display: block;
+}
+
+
+/* Model CSS */
+
+.modal-dialog {
+    margin: 0;
+    position: fixed;
+    height: 100%;
+    background-color: white;
+}
+
+.modal-content {
+    border: 0;
+    border-radius: 0;
+    height: 100%;
+    overflow-y: auto;
+}
